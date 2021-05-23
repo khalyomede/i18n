@@ -13,7 +13,7 @@ fn test_get_translation() {
 		}
 	}
 
-	assert translations.get("Hello world", { "": "" }) == "Hello world"
+	assert translations.get("Hello world", map{}) == "Hello world"
 }
 
 fn test_get_returns_french_translations_when_default_lang_is_french() {
@@ -27,7 +27,7 @@ fn test_get_returns_french_translations_when_default_lang_is_french() {
 		}
 	}
 
-	assert translations.get("Hello world", { "": "" }) == "Bonjour le monde"
+	assert translations.get("Hello world", map{}) == "Bonjour le monde"
 }
 
 fn test_fallbacks_to_key_when_translation_in_default_lang_not_found() {
@@ -40,7 +40,7 @@ fn test_fallbacks_to_key_when_translation_in_default_lang_not_found() {
 		}
 	}
 
-	assert translations.get("Hello world", { "": "" }) == "Hello world"
+	assert translations.get("Hello world", map{}) == "Hello world"
 }
 
 fn test_get_with_placeholders() {

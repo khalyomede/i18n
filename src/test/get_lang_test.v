@@ -13,7 +13,7 @@ fn test_get_lang_returns_correct_french_translation() {
 		}
 	}
 
-	assert translations.get_lang("Hello world", "fr", { "": "" }) == "Bonjour le monde"
+	assert translations.get_lang("Hello world", "fr", map{}) == "Bonjour le monde"
 }
 
 fn test_get_lang_returns_key_name_when_lang_not_found() {
@@ -26,5 +26,5 @@ fn test_get_lang_returns_key_name_when_lang_not_found() {
 		}
 	}
 
-	assert translations.get_lang("Hello world", "fr", { "": "" }) == "Hello world"
+	assert translations.get_lang("Hello world", "fr", map{}) == "Hello world"
 }

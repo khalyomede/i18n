@@ -124,7 +124,7 @@ fn main() {
     }
   }
 
-  assert translations.get_choice("You have :count messages", 14, { "": "" }) == "You have 14 messages"
+  assert translations.get_choice("You have :count messages", 14, map{}) == "You have 14 messages"
 }
 ```
 
@@ -165,7 +165,7 @@ fn main() {
     }
   }
 
-  assert translations.get_choice_lang("You have :count messages", 3, "fr", { "": "" }) == "Vous avez 3 messages"
+  assert translations.get_choice_lang("You have :count messages", 3, "fr", map{}) == "Vous avez 3 messages"
 }
 ```
 

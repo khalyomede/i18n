@@ -13,7 +13,7 @@ fn test_get_choice_lang_returns_single_count_translation_in_french() {
 		}
 	}
 
-	assert translations.get_choice_lang("You have :count messages", 1, "fr", { "": "" }) == "Vous avez 1 message"
+	assert translations.get_choice_lang("You have :count messages", 1, "fr", map{}) == "Vous avez 1 message"
 }
 
 fn test_get_choice_lang_returns_range_count_translation_in_french() {
@@ -27,7 +27,7 @@ fn test_get_choice_lang_returns_range_count_translation_in_french() {
 		}
 	}
 
-	assert translations.get_choice_lang("You have :count messages", 3, "fr" , { "": "" }) == "Vous avez 3 messages"
+	assert translations.get_choice_lang("You have :count messages", 3, "fr" , map{}) == "Vous avez 3 messages"
 }
 
 fn test_get_choice_lang_returns_last_fallback_choice_if_no_matching_count_in_french() {
@@ -41,7 +41,7 @@ fn test_get_choice_lang_returns_last_fallback_choice_if_no_matching_count_in_fre
 		}
 	}
 
-	assert translations.get_choice_lang("You have :count messages", 9, "fr" , { "": "" }) == "Vous avez des messages"
+	assert translations.get_choice_lang("You have :count messages", 9, "fr" , map{}) == "Vous avez des messages"
 }
 
 fn test_get_choice_lang_returns_fallback_translation_if_no_lang_found_in_spanish() {
@@ -55,7 +55,7 @@ fn test_get_choice_lang_returns_fallback_translation_if_no_lang_found_in_spanish
 		}
 	}
 
-	assert translations.get_choice_lang("You have :count messages", 2, "es" , { "": "" }) == "You have 2 messages"
+	assert translations.get_choice_lang("You have :count messages", 2, "es" , map{}) == "You have 2 messages"
 }
 
 fn test_get_choice_lang_returns_count_range_with_star_translation_in_french() {

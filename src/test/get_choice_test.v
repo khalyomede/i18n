@@ -12,7 +12,7 @@ fn test_get_choice_returns_single_count_translation() {
 		}
 	}
 
-	assert translations.get_choice("You have :count messages", 1, { "": "" }) == "You have 1 message"
+	assert translations.get_choice("You have :count messages", 1, map{}) == "You have 1 message"
 }
 
 fn test_get_choice_returns_range_count_translation() {
@@ -25,7 +25,7 @@ fn test_get_choice_returns_range_count_translation() {
 		}
 	}
 
-	assert translations.get_choice("You have :count messages", 3, { "": "" }) == "You have 3 messages"
+	assert translations.get_choice("You have :count messages", 3, map{}) == "You have 3 messages"
 }
 
 fn test_get_choice_returns_last_fallback_choice_if_no_matching_count() {
@@ -38,7 +38,7 @@ fn test_get_choice_returns_last_fallback_choice_if_no_matching_count() {
 		}
 	}
 
-	assert translations.get_choice("You have :count messages", 9, { "": "" }) == "You have some messages"
+	assert translations.get_choice("You have :count messages", 9, map{}) == "You have some messages"
 }
 
 fn test_get_choice_returns_fallback_translation_if_no_lang_found() {
@@ -51,7 +51,7 @@ fn test_get_choice_returns_fallback_translation_if_no_lang_found() {
 		}
 	}
 
-	assert translations.get_choice("You have :count messages", 2, { "": "" }) == "You have 2 messages"
+	assert translations.get_choice("You have :count messages", 2, map{}) == "You have 2 messages"
 }
 
 fn test_get_choice_returns_count_range_with_star_translation() {
@@ -64,5 +64,5 @@ fn test_get_choice_returns_count_range_with_star_translation() {
 		}
 	}
 
-	assert translations.get_choice("You have :count messages", 99, { "": "" }) == "You have some messages (99)"
+	assert translations.get_choice("You have :count messages", 99, map{}) == "You have some messages (99)"
 }
