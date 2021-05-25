@@ -39,7 +39,7 @@ v install khalyomede.i18n
 In this example, we will translate a simple text in French.
 
 ```v
-import khalyomede.i18n.src.i18n { Translations }
+import khalyomede.i18n { Translations }
 
 fn main() {
   translations := Translations{
@@ -64,7 +64,7 @@ As you can see, it uses the "default_lang" by default to know which lang to find
 In this example, we will overpass the default_lang configuration, and print a text in a given lang.
 
 ```v
-import khalyomede.i18n.src.i18n { Translations }
+import khalyomede.i18n { Translations }
 
 fn main() {
   translations := Translations{
@@ -87,7 +87,7 @@ fn main() {
 In this example, we will use a special syntax to define fillable spots in our translated texts.
 
 ```v
-import khalyomede.i18n.src.i18n { Translations }
+import khalyomede.i18n { Translations }
 
 fn main() {
   translations := Translations{
@@ -110,7 +110,7 @@ fn main() {
 In this example, we will define texts that have differents translations depending the number of items.
 
 ```v
-import khalyomede.i18n.src.i18n { Translations }
+import khalyomede.i18n { Translations }
 
 fn main() {
   translations := Translations{
@@ -151,7 +151,7 @@ And even define an infinite max range:
 In this example, we will overpass the default_lang configuration to return a pluralized text in a given lang.
 
 ```v
-import khalyomede.i18n.src.i18n
+import khalyomede.i18n
 
 fn main() {
   translations := Translations{
@@ -179,5 +179,5 @@ fn main() {
 ## Test
 
 ```bash
-v test src/test
+v test .
 ```

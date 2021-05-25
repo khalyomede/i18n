@@ -1,7 +1,7 @@
 Module {
 	name: 'i18n'
 	author: 'khalyomede'
-	version: '0.1.0'
+	version: '0.2.0'
 	repo_url: 'https://github.com/khalyomede/i18n'
 	vcs: 'git'
 	tags: ['i18n', 'internationalization', 'translation', 'pluralization', 'function']

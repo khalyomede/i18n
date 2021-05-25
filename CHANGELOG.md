@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2021-05-25
+
+### Break
+
+- The import path is now `import khalyomede.i18n`.
+
 ## [1.0.0] - 2021-05-23
 
 ### Added
